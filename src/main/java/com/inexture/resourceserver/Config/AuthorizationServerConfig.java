@@ -14,7 +14,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory().withClient("utsav").secret("dabhi").authorizedGrantTypes("authorization_code")
-                .scopes("read").authorities("CLIENT").redirectUris("http://localhost:8090/showEmployees");
+                .scopes("read").authorities("CLIENT")
+                .redirectUris("http://localhost:8090/showEmployees");
     }
 
 //    @Override
